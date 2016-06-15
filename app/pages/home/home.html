@@ -1,0 +1,21 @@
+<ion-navbar *navbar secondary>
+  <ion-title>
+    <center>Quiz section</center>
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="home">
+
+  <ion-list radio-group *ngIf="data" [(ngModel)]="abc">
+    
+    <div class="item item-text-wrap">
+      {{data.quiz}}?
+    </div>
+    <hr/>
+    <ion-item *ngFor="#op of data.options">
+      <ion-label>{{op}}</ion-label>
+      <ion-radio value="{{op}}"></ion-radio>
+    </ion-item>
+  </ion-list>
+  <button (click)="next(abc)">Next</button>
+  </ion-content>

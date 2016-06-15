@@ -1,0 +1,34 @@
+<ion-navbar *navbar secondary>
+  <ion-title>
+    <center>Add Quiz</center>
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="quiz">
+  <!--<ion-list>-->
+
+  <!--<ion-item>-->
+  <ion-input type="text" placeholder="Add Quiz" [(ngModel)]="obj.quiz" required></ion-input>
+  <!--</ion-item>-->
+
+  <!--<ion-item>-->
+  <ion-input type="text" placeholder="Answer" [(ngModel)]="obj.ans" required></ion-input>
+  <!--</ion-item>-->
+
+  <!--<ion-item>-->
+  <ion-input type="text" placeholder="Option" [(ngModel)]="obj.optio1" required></ion-input>
+  <!--</ion-item>-->
+  <!--<ion-item>-->
+  <ion-input type="text" placeholder="Option" [(ngModel)]="obj.optio2" required></ion-input>
+  <!--</ion-item>-->
+  <!--<ion-item>-->
+  <ion-input type="text" placeholder="Option" [(ngModel)]="obj.optio3" required></ion-input>
+  <!--</ion-item>-->
+  <!--<ion-item>-->
+  <ion-input type="text" placeholder="Option" [(ngModel)]="obj.optio4" required></ion-input>
+  <!--</ion-item>-->
+  <!--</ion-list>-->
+  <button round (click)="login(obj)" [disabled]="!obj.optio4 || !obj.optio3 ||!obj.optio2||!obj.optio1||!obj.ans||!obj.quiz">Submit   <ion-icon name="add-circle"></ion-icon></button>
+  <button round (click)="next()">Quiz <ion-icon name="arrow-dropright"></ion-icon></button>
+
+</ion-content>
